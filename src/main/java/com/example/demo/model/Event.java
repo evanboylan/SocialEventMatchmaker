@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,6 +25,7 @@ public class Event {
     private String imgUrl;
 
     @ManyToMany(mappedBy = "events")
+    @JsonIgnore
     private Collection<User> users;
 
     public Event(String headliner, String opener, String venue, String eventDate, String eventTime, double cost, String imgUrl, User... user) {

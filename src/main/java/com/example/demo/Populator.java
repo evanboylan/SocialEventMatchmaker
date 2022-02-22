@@ -32,7 +32,5 @@ public class Populator implements CommandLineRunner {
         userRepo.save(evanTest);
         userRepo.save(joshTest);
 
-
-
     }
 }
