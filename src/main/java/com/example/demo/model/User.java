@@ -22,4 +22,26 @@ public class User {
         this.imageUrl = imageUrl;
         this.events = Arrays.asList(event);
     }
+
+    public User(){
+        //zero arg constructor
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public Collection<Event> getEvents() {
+        return events;
+    }
+
+
 }
