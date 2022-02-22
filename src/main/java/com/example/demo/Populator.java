@@ -26,8 +26,8 @@ public class Populator implements CommandLineRunner {
         eventRepo.save(bonobo);
         eventRepo.save(bonobo2);
 
-        User evanTest = new User("Evan", "https://avatars.githubusercontent.com/u/65260914?s=400&u=8088e97bd077c1d562c21607a9c836d7f090a154&v=4");
-        User joshTest = new User ("Josh", "https://avatars.githubusercontent.com/u/55861739?v=4");
+        User evanTest = new User("Evan", "https://avatars.githubusercontent.com/u/65260914?s=400&u=8088e97bd077c1d562c21607a9c836d7f090a154&v=4", bonobo, bonobo2);
+        User joshTest = new User ("Josh", "https://avatars.githubusercontent.com/u/55861739?v=4", bonobo2);
 
         userRepo.save(evanTest);
         userRepo.save(joshTest);
