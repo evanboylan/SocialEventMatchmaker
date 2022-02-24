@@ -20,8 +20,8 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Event bonobo = new Event("Bonobo", "opener", "venue", "date","7:00pm", 7.00, "imgurl");
-        Event bonobo2 = new Event("Bonobo2", "opener", "venue", "date","7:00pm", 7.00, "imgurl");
+        Event bonobo = new Event("Bonobo", "opener", "venue", "date","7:00pm", 7.00, "https://i.discogs.com/oD4ncBjvBbVv13_anudRfhIo0TWRjuBtk7eevmq_hr4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWltYWdlcy9SLTIx/NzIzOTQwLTE2NDMw/NTQ3MjctNTY3NC5q/cGVn.jpeg");
+        Event bonobo2 = new Event("Bonobo2", "opener", "venue", "date","7:00pm", 7.00, "https://i.discogs.com/oD4ncBjvBbVv13_anudRfhIo0TWRjuBtk7eevmq_hr4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWltYWdlcy9SLTIx/NzIzOTQwLTE2NDMw/NTQ3MjctNTY3NC5q/cGVn.jpeg");
 
         eventRepo.save(bonobo);
         eventRepo.save(bonobo2);

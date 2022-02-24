@@ -22,7 +22,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User retrieveSingleUser(@PathVariable Long id){
+    public User retrieveSingleUser(@PathVariable Long id) {
         return userRepo.findById(id).get();
     }
 
@@ -30,5 +30,6 @@ public class UserController {
     public Iterable<User> getAllUsers() {
         return userRepo.findAll();
     }
+
 
 }

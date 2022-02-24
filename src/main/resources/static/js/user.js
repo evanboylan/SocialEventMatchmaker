@@ -2,7 +2,7 @@ import {
     clearChildren
 } from "./app.js"
 
-function dispalyUserView(mainEl, user){
+function displayUserView(mainEl, user){
 
     const userDisplaySectionEl = document.createElement("div");
     userDisplaySectionEl.classList.add("user_display_section");
@@ -11,11 +11,11 @@ function dispalyUserView(mainEl, user){
     userImgNameDivEl.classList.add("user_pic_name");
 
     const userImgEl = document.createElement("img");
-    userImgEl.src = user.imgUrl;
+    userImgEl.src = user.imageUrl;
     userImgEl.classList.add("user_img");
 
     const userNameEl = document.createElement("p");
-    userNameEl.src = user.name;
+    userNameEl.innerText = user.name;
     userNameEl.classList.add("user_name");
 
     userImgNameDivEl.appendChild(userImgEl);
@@ -33,34 +33,33 @@ function dispalyUserView(mainEl, user){
 
         const eventImageEl = document.createElement("img");
         eventImageEl.classList.add("event_img");
-        eventImageEl.src = event.imgUrl;
+        eventImageEl.src = event.imageUrl;
 
         const eventDetailsEl = document.createElement("div");
         eventDetailsEl.classList.add("event_details_section");
 
         const eventDateTitleEl = document.createElement("p");
-        eventDateTitleEl.src = event.eventDate;
+        eventDateTitleEl.innerText = event.eventDate;
         eventDateTitleEl.classList.add("event_date_title");
 
         const eventHeadlinerEl = document.createElement("p");
-        eventHeadlinerEl.src = event.headliner;
+        eventHeadlinerEl.innerText = event.headliner;
         eventHeadlinerEl.classList.add("event_headliner");
 
         eventDetailsEl.appendChild(eventDateTitleEl);
         eventDetailsEl.appendChild(eventHeadlinerEl);
-        eventDetailsEl.appendChild(eventWhenWhereDetailsSectionEl);
 
         const eventWhenWhereDetailsSectionEl = document.createElement("div");
         eventWhenWhereDetailsSectionEl.classList.add("when_where_details_section");
 
         const eventVenueEl = document.createElement("p");
-        eventVenueEl.src = event.venue;
+        eventVenueEl.innerText = event.venue;
 
         const eventDateEl = document.createElement("p");
-        eventDateEl.src = event.eventDate;
+        eventDateEl.innerText = event.eventDate;
 
         const eventTimeEl = document.createElement("p");
-        eventTimeEl.src = event.eventTimeEl;
+        eventTimeEl.innerText = event.eventTimeEl;
 
         eventWhenWhereDetailsSectionEl.appendChild(eventVenueEl);
         eventWhenWhereDetailsSectionEl.appendChild(eventDateEl);
@@ -70,6 +69,8 @@ function dispalyUserView(mainEl, user){
         eventInfoSectionEl.appendChild(eventDetailsEl);
     
         userEventsSectionEl.appendChild(eventInfoSectionEl);
+
+        eventDetailsEl.appendChild(eventWhenWhereDetailsSectionEl);
     })
 
     userDisplaySectionEl.appendChild(userEventsSectionEl);
@@ -78,5 +79,5 @@ function dispalyUserView(mainEl, user){
 }
 
 export {
-    dispalyUserView
+    displayUserView
 };

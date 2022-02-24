@@ -18,6 +18,8 @@ function buildHeader() {
     const helloEl = document.createElement("p");
     helloEl.innerText = "Hello";
 
+    sectionEl.append(helloEl);
+    containerEl.append(sectionEl);
 }
 
 function buildMainElement(){
@@ -25,13 +27,14 @@ function buildMainElement(){
     const mainEl = document.createElement("main");
     mainEl.classList.add("main-content");
     containerEl.appendChild(mainEl);
-    fetch("/users/")
+    fetch("/users/3")
     .then(res => res.json())
     .then(user => {
         displayUserView(mainEl, user);
     })
 }
-function buildFooter(){
+
+function buildFooter() {
     const footerEl = document.createElement("footer");
     const footerDivEl = document.createElement("div");
     footerDivEl.classList.add("footer_text");

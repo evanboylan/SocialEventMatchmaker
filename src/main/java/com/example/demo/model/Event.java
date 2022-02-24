@@ -22,20 +22,20 @@ public class Event {
     private String eventDate;
     private String eventTime;
     private double cost;
-    private String imgUrl;
+    private String imageUrl;
 
     @ManyToMany(mappedBy = "events")
     @JsonIgnore
     private Collection<User> users;
 
-    public Event(String headliner, String opener, String venue, String eventDate, String eventTime, double cost, String imgUrl, User... user) {
+    public Event(String headliner, String opener, String venue, String eventDate, String eventTime, double cost, String imageUrl, User... user) {
         this.headliner = headliner;
         this.opener = opener;
         this.venue = venue;
         this.eventDate = eventDate;
         this.eventTime = eventTime;
         this.cost = cost;
-        this.imgUrl = imgUrl;
+        this.imageUrl = imageUrl;
         this.users = Arrays.asList(user);
     }
 
@@ -67,8 +67,8 @@ public class Event {
         return cost;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     public Collection<User> getUsers() {
